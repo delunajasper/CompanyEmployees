@@ -2,6 +2,7 @@ namespace CompanyEmployees.Extensions;
 
 public static class ServiceExtensions
 {
+    //TODO Make this restrictive. 
     public static void ConfigureCors(this IServiceCollection services) =>
         services.AddCors(options =>
         {
@@ -9,5 +10,12 @@ public static class ServiceExtensions
                 builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
+        });
+
+    //Host app on IIS
+    public static void ConfigureIISIntegration(this IServiceCollection services) =>
+        services.Configure<IISOptions>(options =>
+        {
+
         });
 }
