@@ -1,4 +1,4 @@
-namespace Contracts;
+namespace CompanyEmployees.Contracts;
 
 public interface IloggerManager
 {

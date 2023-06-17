@@ -1,7 +1,7 @@
-using Contracts;
+using CompanyEmployees.Contracts;
 using NLog;
 
-namespace LoggerService;
+namespace CompanyEmployees.LoggerService;
 
 public class LoggerManager : IloggerManager
 {
