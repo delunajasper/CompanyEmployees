@@ -1,7 +1,8 @@
-using Contracts;
-using LoggerService;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using IloggerManager = CompanyEmployees.Contracts.IloggerManager;
+using LoggerManager = CompanyEmployees.LoggerService.LoggerManager;
 
 namespace CompanyEmployees.Extensions;
 
