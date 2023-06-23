@@ -9,6 +9,11 @@ public class RepositoryManager : IRepositoryManager
  private Lazy<ICompanyRepository> _companyRepository;
  private Lazy<IEmployeeRepository> _employeeRepository;
 
+ /// <summary>
+ /// Leveraged Lazy class to ensure lazy initialization of repos.
+ /// Repo instances are only created when accessed for the first time.
+ /// </summary>
+ /// <param name="repositoryContext"></param>
  public RepositoryManager(RepositoryContext repositoryContext)
  {
   _repositoryContext = repositoryContext;
