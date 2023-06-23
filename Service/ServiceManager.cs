@@ -11,7 +11,7 @@ internal sealed class ServiceManager : IServiceManager
     public ServiceManager(IRepositoryManager repositoryManager, IloggerManager logger)
     {
         _companyService = new Lazy<ICompanyService>(() => new CompanyService(repositoryManager, logger));
-        _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, logger))
+        _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, logger));
     }
 
     public ICompanyService CompanyService => _companyService.Value;
