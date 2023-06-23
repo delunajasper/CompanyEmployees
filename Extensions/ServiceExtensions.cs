@@ -1,6 +1,8 @@
 
+using CompanyEmployees.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
 using IloggerManager = CompanyEmployees.Contracts.IloggerManager;
 using LoggerManager = CompanyEmployees.LoggerService.LoggerManager;
 
@@ -27,4 +29,7 @@ public static class ServiceExtensions
 
     public static void ConfigureLoggerService(this IServiceCollection services) =>
         services.AddSingleton<IloggerManager, LoggerManager>();
+
+    public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+        services.AddScoped<IRepositoryManager, RepositoryManager>();
 }
